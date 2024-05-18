@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/cart.css">
+    <link rel="stylesheet" href="../style/home.css">
+    <link rel="stylesheet" href="../style/footer.css">
+    <title>Cart</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+        <nav class="navbar">
+        <div class="navbar-left">
+            <div class="nav-checkbtn">
+                <span class="material-symbols-outlined" onclick="navbar()"> menu </span>
+                <h1 id="navclose"><ion-icon name="close-outline"></ion-icon></h1>
+            </div>
+            <img src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt="KFC-LOGO" id="navbar-kfc-logo" />
+            <p id="navbar-menu" class="hide-item">Menu</p>
+            <a id="blog" href="#">
+                <p id="navbar-about" class="hide-item">Deals</p>
+            </a>
+        </div>
+
+        <div class="navbar-right">
+            <img class="man-icon hide-item" id="navbar-man-icon"
+                src="https://images.ctfassets.net/wtodlh47qxpt/6bJdGLRkksNvWP4LI9ZiFF/cb89d6393492fd093e0f99980abfa39e/Account_Icon.svg"
+                alt="man-icon" />
+            <p id="navbar-account" class="account hide-item">Sign In</p>
+
+            <p id="navbar-price">₹0.00</p>
+            <img id="navbar-cart-bucket"
+                src="https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg" />
+        </div>
+
+    </nav>
+
+
+
+
+
+
+    
+    <div class="shubhamnav">
+        <div class="navigation">
+            <div>
+                <h1 id="navbar-menu">Menu</h1>
+                <h1>→</h1>
+                <div><img
+                        src="https://mma.prnewswire.com/media/1460256/Burger_King_Burger_King__and_Impossible_Foods_Announce_the_Canad.jpg"
+                        alt=""></div>
+            </div>
+            <div>
+                <h1 id="navbar-about">Deal</h1>
+                <h1>→</h1>
+                <div><img src="https://staticg.sportskeeda.com/editor/2022/11/03667-16688163437652-1920.jpg" alt="">
+                </div>
+            </div>
+            <h3>Get Help</h3>
+            <h3>Contact Us</h3>
+            <h3>KFC FeedBack</h3>
+            <h3>Privacy Policy</h3>
+
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+
+    <div id="shubhamSecondNav">
+        <p><span><img src="../footerimg/Find_KFC.svg" alt=""></span>Delivery to:<span id="newAdd"></span></p>
+        <p><span><img src="../Images/clock.264bac4c.svg" alt=""></span><span id="addnewTime">ASAP</span></p>
+        <button onclick="changeAddress()">Change</button>
+    </div>
+
+
+
+
+
+    <section id="homepopup">
+        <div class="addresspopup">
+            <div id="pophead">
+                <p onclick="addressBack()"><ion-icon name="arrow-back-outline"></ion-icon></p>
+                <h2>CHANGE YOUR ORDER</h2>
+                <p onclick="addressClose()"><ion-icon name="close-circle-outline"></ion-icon></p>
+            </div>
+            <hr id="popheadHR">
+            
+            <div id="addchange">
+                <label for="">ORDER TYPE</label><br>
+                <div>
+                <input type="text" id="pickdel" value="DELIVERY">
+                <button>EDIT</button>
+            </div>
+               <hr id="popheadHR2">
+            </div>
+
+            <div id="addlocation">
+                <label for="">YOUR LOCATION</label><br>
+                <div>
+                <input type="text" id="addLoc">
+                <button>EDIT</button>
+            </div>
+               <hr id="popheadHR3">
+            </div>
+
+            <label id="scheduleOrderlabel" style="display: block;">SCHEDULE FOR YOUR ORDER</label>
+
+            <div id="scheduleOrder">
+                
+                <br>
+                <div>
+                 <div id="orderone">
+                    <label for="" style="display: block;">Date</label>
+                    <div>
+                        <input type="text" value="Today">
+                    </div>
+                 </div>
+                 <div id="ordertwo">
+                    <label for="">Time</label>
+                    <div>
+                        <select id="asap">
+                            <option value="ASAP">ASAP</option>
+                            <option value="12:30 PM">12:30</option>
+                            <option value="1:30 PM">1:30</option>
+                            <option value="3:30 PM">3:30</option>
+                            <option value="5:30 PM">5:30</option>
+                            <option value="7:00 OM">7:00</option>
+                        </select>
+                    </div>
+                 </div>
+                </div>
+            </div>
+            <br><br><br>
+            <button id="homeconfirm" onclick="addConfirm()">CONFIRM</button>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="doshopping">
+        <div id="cartshubham">
+            <img src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg" alt="3strip">
+            <h1>MY CART</h1>
+        </div>
+    </div>
+
+
+    <div id="cartshubhamfirstdiv">
+        <img src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg" alt="3strip">
+        <h1>MY CART</h1>
+    </div>
+
+    <div class="shubhamcartMaincontainer">
+        <div id="shubhamcartItem">
+            <!-- ------------appending all content from js ------ -->
+        </div>
+
+        <div class="shubhamPaymentCart">
+            <h2><span id="length">1</span> ITEMS</h2>
+            <div class="applyCuppon">
+                <span><img src="https://online.kfc.co.in/static/media/Offers_Coupon_Icon.72b94c41.svg" alt="">Apply
+                    Offers & Deals</span>
+                <button id="disblock">View All</button>
+            </div>
+            <div class="paySubTotal">
+                <span>subtotal</span>
+                <div>₹
+                    <span id="subtotal">0</span>
+                </div>
+            </div>
+            <div class="payGst">
+                <span>Gst</span>
+                <div>
+                    ₹<span id="gst"></span>
+                </div>
+            </div>
+            <div class="payBack">
+                <span id="pay">Restaurant Handling (Incl. Taxes)</span>
+                <span>₹ <span id="res"></span></span>
+            </div>
+            <hr id="HR">
+            <div class="payDonation">
+                <input type="checkbox" name="check1" id="check1">
+                <span id="imdon">Donate ₹5.00 Tick to Add Hope.</span>
+                <span><img
+                        src="data:image/png;base64,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"
+                        alt=""></span>
+                <p>Our goal is to feed 20 million people by 2023.</p>
+            </div>
+            <div class="checkout">
+                <span>checkOut</span>
+                <div>
+                    ₹<span id="totalSum">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="stillQuestion">
+        <h3>STILL HAVE A QUESTION?</h3>
+        <hr id="stillHR">
+        <div id="stillBtn">
+            <button><span><ion-icon name="call-outline"></ion-icon></span>Call Us</button>
+            <button><span><ion-icon name="mail-outline"></ion-icon></span>Contact Us</button>
+        </div>
+    </div>
+
+    <section>
+    <div class="discountPop">
+        <h3 id="headingshubhamchaubey">HAVE A DISCOUNT CODE?</h3>
+        <p>You can only apply one coupon per order</p>
+        <div><label for="text">Discount Code</label>
+            <input type="text" placeholder="Enter Code" id="discountField">
+        </div>
+        
+        <button id="applyDiscountButton">Apply</button>
+    </div>
+
+</section>
+<div id="humdege">
+<div id="maidunga">
+    <p id="appliedSuccessfull">Hurray...! Coupon has been applied successfully.......</p>
+</div>
+</div>
+
+
+<br><br><br>
+
+<footer>
+    <div id="allsection">
+        <div><a href="#"><img
+                    src="https://images.ctfassets.net/wtodlh47qxpt/25FSYFuEtGct8NSrtpKe6d/b602f6fe0bf294e6a6dff5d7648bf594/KFC_Logo.svg"></a>
+        </div>
+        <div>
+            <ul>
+                <li>KFC Food</li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Order Lookup</a></li>
+                <li><a href="#">Gift Card</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>Support</li>
+                <li><a href="#">Get Help</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">KFC Feedback</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>Legal</li>
+                <li><a href="#">Terms and Condition</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Disclaimer</a></li>
+                <li><a href="#">Caution Notice</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>KFC India</li>
+                <li><a href="#">About KFC</a></li>
+                <li><a href="#">KFC Care</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Our Golden Past</a></li>
+            </ul>
+        </div>
+
+
+        <div><img src="../footerimg/Find_KFC.svg" alt="location"></i>
+            <a id="find">Find a KFC</a>
+        </div>
+
+
+        <div><img src="../footerimg/google_play.svg"></div>
+
+        <div><a><img src="../footerimg/apple.svg"></a></div>
+    </div>
+    <div id="end">
+        <div>
+            <h5>© KFC Corporation 2024 All Rights Reserved Created By Rahul</h5>
+        </div>
+        <div id="social">
+            <a><img src="../footerimg/Social_Insta_White.svg"></a>
+            <a><img src="../footerimg/Social_Facebook_White.svg"></a>
+            <a><img src="../footerimg/Social_Twitter_White.svg"></a>
+        </div>
+    </div>
+    </footer>
+
+
+</body>
+</html>
+<script src="../script/cart.js"></script>
+
+<script>
+    document.getElementById('navbar-menu').addEventListener('click', function(){
+    location.href='./product.html';
+})
+document.getElementById('navbar-about').addEventListener('click', function(){
+    location.href='./deals.html';
+})
+document.getElementById('navbar-account').addEventListener('click', function(){
+    location.href='./signup.html';
+})
+document.getElementById('navbar-cart-bucket').addEventListener('click', function(){
+    location.href='./cart.html';
+})
+document.getElementById('navbar-kfc-logo').addEventListener('click', function(){
+    location.href='index.html';
+})
+
+
+
+// let addCartArr = JSON.parse(localStorage.getItem("CartData")) || [];
+//     let valueofPrice=0;
+//     let allPrice=JSON.parse(localStorage.getItem("CartData")) || [];
+//     function totalPrice(){
+//         allPrice.forEach(function(elem){
+//              console.log(elem.price)
+//             valueofPrice+=parseInt(elem.price);
+//         })
+//          document.getElementById('navbar-price').innerText='₹'+valueofPrice+'.00';
+//     }
+//     totalPrice()
+
+
+    document.querySelector('.checkout').addEventListener('click', function(){
+        window.location.href='./address.html'
+    })
+
+</script>
